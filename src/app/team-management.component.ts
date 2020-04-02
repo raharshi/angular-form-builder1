@@ -21,15 +21,15 @@ export class TeamManagementComponent implements OnInit {
   }
   ngOnInit() {
 	  this.allSkills = this.teamMngService.getSkills();
-  	  this.createTeamForm();
+  	this.createTeamForm();
 	  this.addEmployee();
   }
   createTeamForm(){
 	  this.teamForm = this.formBuilder.group({
-	  	 teamName: ['', Validators.required ],
-		 teamManager: '',
-		 teamDept: this.formBuilder.group(new Department()),
-	         employees: this.formBuilder.array([]) 
+	  	teamName: ['', Validators.required ],
+		  teamManager: '',
+		  teamDept: this.formBuilder.group(new Department()),
+	    employees: this.formBuilder.array([]) 
 	  }); 
   }
   get empFormArray(): FormArray{
