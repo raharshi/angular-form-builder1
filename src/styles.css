@@ -1,0 +1,23 @@
+.employee {
+	border: 2px solid blue;
+	width: 275px;
+}
+.department {
+	border: 2px solid blue;
+	width: 275px;
+}
+.team {
+	border: 3px solid black;
+	width: 300px;
+}
+.all-emp {
+	border: 3px solid black;
+	width: 275px;	
+}
+.error{
+        color: red;
+} 
+.submitted{
+        color: green;
+        font-size: 20px;
+} 
