@@ -16,8 +16,8 @@ export class TeamManagementComponent implements OnInit {
   formSubmitted = false;
   allSkills: Observable<any[]>
   constructor(
-          private formBuilder:FormBuilder,
-          private teamMngService: TeamManagementService) { 
+    private formBuilder:FormBuilder,
+    private teamMngService: TeamManagementService) { 
   }
   ngOnInit() {
 	  this.allSkills = this.teamMngService.getSkills();
@@ -56,11 +56,11 @@ export class TeamManagementComponent implements OnInit {
 		teamDept: team.teamDept
 	  }); 
 	  let employeeFormGroups = team.employees.map(employee => this.formBuilder.group(employee));
-          let employeeFormArray = this.formBuilder.array(employeeFormGroups);
-          this.teamForm.setControl('employees', employeeFormArray);
+      let employeeFormArray = this.formBuilder.array(employeeFormGroups);
+      this.teamForm.setControl('employees', employeeFormArray);
   }
   onFormSubmit() {
-          let data = JSON.stringify(this.teamForm.value);
+    let data = JSON.stringify(this.teamForm.value);
 	  console.log('-----Team in JSON Format-----');
 	  console.log(data);
 	  let team: Team = this.teamForm.value;
